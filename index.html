@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farsa de Inês Pereira – Cena VI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="notification" class="notification hidden">
+    <span class="material-icons">arrow_back</span>
+    <span id="notification-text">Voltaste atrás</span>
+</div>
+
+<!-- SLIDE 0 -->
+<section class="slide active" id="slide-0">
+    <div class="splash-bg"></div>
+    <div class="splash-stars" id="splash-stars"></div>
+    <div class="splash-center">
+        <p class="splash-subtitle">Gil Vicente apresenta</p>
+        <h1 class="splash-title">Farsa de<br>Inês Pereira</h1>
+        <p class="splash-scene">— Cena VI —</p>
+        <button class="play-btn" id="play-btn" onclick="startExperience()">
+            <span class="material-icons">play_arrow</span>
+        </button>
+        <p class="splash-hint">Clique para começar</p>
+    </div>
+    <div class="corner-ornament tl">✦</div>
+    <div class="corner-ornament tr">✦</div>
+    <div class="corner-ornament bl">✦</div>
+    <div class="corner-ornament br">✦</div>
+</section>
+
+<!-- SLIDE 1 -->
+<section class="slide" id="slide-1">
+    <div class="sky-bg"></div>
+    <div class="bg-clouds">
+        <div class="bg-cloud bc1"></div>
+        <div class="bg-cloud bc2"></div>
+        <div class="bg-cloud bc3"></div>
+        <div class="bg-cloud bc4"></div>
+    </div>
+    <div class="clouds-layer" id="clouds-layer">
+        <div class="main-cloud mc-left" id="mc-left"></div>
+        <div class="main-cloud mc-right" id="mc-right"></div>
+        <div class="main-cloud mc-top" id="mc-top"></div>
+    </div>
+    <div class="slide-center" id="clouds-text">
+        <h2 class="clouds-title">Realizado por:<br>Caetano Carraínho nº4, Diogo Sardinha nº 8, Guilherme Dias nº 11</h2>
+        <p class="clouds-sub">Pressione <kbd>W</kbd> para continuar</p>
+    </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide" id="slide-2">
+    <div class="parchment-bg"></div>
+    <div class="slide-center">
+        <div class="closed-book" id="closed-book">
+            <div class="book-spine"></div>
+            <div class="book-cover">
+                <div class="book-cover-inner">
+                    <div class="book-ornament">✦ ✦ ✦</div>
+                    <h2 class="book-cover-title">Farsa de<br>Inês Pereira</h2>
+                    <div class="book-divider"></div>
+                    <p class="book-cover-scene">Cena VI</p>
+                    <div class="book-ornament">✦ ✦ ✦</div>
+                    <div class="book-shine"></div>
+                </div>
+            </div>
+            <div class="book-pages-side"></div>
+        </div>
+        <p class="book-hint">Pressione <kbd>W</kbd> para abrir o livro</p>
+    </div>
+</section>
+
+<!-- SLIDE 3 – ÍNDICE (A OBRA + ÍNDICE) -->
+<section class="slide" id="slide-3">
+    <div class="parchment-bg"></div>
+    <div class="open-book-wrapper">
+        <div class="open-book" id="open-book-3">
+            <!-- PÁGINA ESQUERDA: A Obra -->
+            <div class="book-page page-left">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">A Obra</h3>
+                    <div class="book-div-thin"></div>
+                    <ul class="intro-bullets">
+                        <li><span class="ib-label">Autor e data:</span> Gil Vicente, 1523.</li>
+                        <li><span class="ib-label">Género:</span> Teatro cómico português, no contexto do Renascimento.</li>
+                        <li><span class="ib-label">O que a obra faz:</span> Usa humor e sátira para mostrar fraquezas humanas e criticar regras da sociedade.</li>
+                        <li><span class="ib-label">História:</span>
+                            <ul class="sub-bullets">
+                                <li>Inês Pereira quer casar com um homem nobre e rico.</li>
+                                <li>Depois de se decepcionar, prefere um marido simples e obediente.</li>
+                            </ul>
+                        </li>
+                        <li><span class="ib-label">Mensagem principal:</span> A felicidade não vem da riqueza ou do estatuto, mas da simplicidade e de boas escolhas pessoais.</li>
+                        <li><span class="ib-label">Como é escrita:</span> Com diálogos divertidos, personagens exageradas e situações cómicas.</li>
+                        <li><span class="ib-label">Importância:</span> Mostra a sociedade portuguesa do século XVI, mas fala também sobre problemas e comportamentos que continuam atuais.</li>
+                    </ul>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">i</div>
+            </div>
+            <!-- Folha animada (frente = índice) -->
+            <div class="page-flip" id="page-flip">
+                <div class="page-flip-front">
+                    <div class="page-content page-scroll">
+                        <div class="page-orn">❧</div>
+                        <h3 class="page-label">Índice</h3>
+                        <div class="book-div-thin"></div>
+                        <ol class="index-list">
+                            <li><span class="idx-dot">◆</span> Introdução</li>
+                            <li><span class="idx-dot">◆</span> Leitura expressiva do texto</li>
+                            <li><span class="idx-dot">◆</span> Análise de personagens</li>
+                            
+                        </ol>
+                        <div class="page-orn bottom-orn">❧</div>
+                    </div>
+                    <div class="page-num">ii</div>
+                </div>
+                <div class="page-flip-back"></div>
+            </div>
+            <!-- PÁGINA DIREITA: Índice (estática) -->
+            <div class="book-page page-right">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">Índice</h3>
+                    <div class="book-div-thin"></div>
+                    <ol class="index-list">
+                        <li><span class="idx-dot">◆</span> Recursos expressivos</li>
+                            <li><span class="idx-dot">◆</span> Auto e heterocaracterização</li>
+                            <li><span class="idx-dot">◆</span> Cómicos</li>
+                            <li><span class="idx-dot">◆</span> Sátira social e conclusão</li>
+                    </ol>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">ii</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 4 – INTRODUÇÃO (tópicos) -->
+<section class="slide" id="slide-4">
+    <div class="parchment-bg"></div>
+    <div class="open-book-wrapper">
+        <div class="open-book">
+            <!-- PÁGINA ESQUERDA: Antes -->
+            <div class="book-page page-left">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">I. Introdução</h3>
+                    <div class="book-div-thin"></div>
+                    <p class="intro-section-title">Antes <span class="intro-section-sub">(recapitulação das cenas anteriores)</span></p>
+                    <ul class="intro-bullets">
+                        <li>Inês Pereira era jovem e ambiciosa, desejando casar com um homem nobre e rico.</li>
+                        <li>Casou-se com o primeiro marido, mas a experiência foi infeliz, mostrando-lhe os perigos da ambição social exagerada.</li>
+                        <li>A sociedade é apresentada como rígida, com regras e expectativas para a mulher, limitando a sua liberdade.</li>
+                        <li>As relações humanas eram muitas vezes superficiais ou guiadas por interesses económicos.</li>
+                        <li>Gil Vicente usa humor e sátira para mostrar hipocrisia e fraquezas humanas e prepara a obra para novas lições.</li>
+                    </ul>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">1</div>
+            </div>
+            <!-- PÁGINA DIREITA: Agora -->
+            <div class="book-page page-right">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">I. Introdução <em class="page-label-cont">(cont.)</em></h3>
+                    <div class="book-div-thin"></div>
+                    <p class="intro-section-title">Agora <span class="intro-section-sub">(Cena VI)</span></p>
+                    <ul class="intro-bullets">
+                        <li>Inês Pereira já aprendeu com a experiência e está pronta para escolher um novo marido, desta vez simples e submisso.</li>
+                        <li>Lianor Vaz atua como intermediária, guiando Inês de forma prática e direta, sem sentimentalismos.</li>
+                        <li>Surge Pero Marques, personagem ingénua e desajeitada, que contrasta com a inteligência de Inês.</li>
+                        <li>O diálogo explora humor, trocadilhos e ironia, mantendo o tom cómico da obra.</li>
+                        <li>A cena mostra a sociedade do século XVI em ação: casamento como negócio social e familiar, e liberdade limitada das mulheres, mas também evidencia a aprendizagem e adaptação de Inês.</li>
+                    </ul>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">2</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 5 – TEXTO CENA VI -->
+<section class="slide" id="slide-5">
+    <div class="parchment-bg"></div>
+    <div class="reading-toolbar">
+        <button class="tool-btn" onclick="zoomIn()" title="Ampliar"><span class="material-icons">zoom_in</span></button>
+        <button class="tool-btn" onclick="zoomOut()" title="Reduzir"><span class="material-icons">zoom_out</span></button>
+        <button class="tool-btn" onclick="toggleNightMode()" title="Modo noturno" id="night-btn"><span class="material-icons">dark_mode</span></button>
+        <button class="tool-btn" onclick="toggleSpacing()" title="Espaçamento" id="spacing-btn"><span class="material-icons">format_line_spacing</span></button>
+        <button class="tool-btn" onclick="toggleHighlight()" title="Destacar falas" id="highlight-btn"><span class="material-icons">highlight</span></button>
+    </div>
+    <div class="open-book-wrapper">
+        <div class="open-book">
+            <div class="book-page page-left" id="drama-page">
+                <div class="page-content page-scroll" id="drama-content">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">II. Leitura Expressiva — Cena VI</h3>
+                    <div class="book-div-thin"></div>
+                    <div id="drama-text">
+                        <p class="vline stage-dir">Aqui vem Lianor Vaz e finge Inês Pereira estar chorando, e diz Lianor Vaz:</p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Como estais Inês Pereira?</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Muito triste Lianor Vaz.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Que fareis ao que Deus faz?</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Casei por minha canseira.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Se ficaste prenhe basta.</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Bem quisera eu dele casta,<br>mas nam quis minha ventura.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Filha não tomeis tristura<br>que a morte a todos gasta.<br>O que havedes de fazer?<br>Casade-vos filha minha.</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Jesu Jesu tam asinha<br>isso me haveis de dizer?<br>Quem perdeu um tal marido<br>tão discreto e tão sabido<br>e tão amigo de minha vida.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Dai isso por esquecido<br>e buscai outra guarida.<br>Pero Marques tem que herdou<br>fazenda de mil cruzados<br>mas vós quereis avisados.</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Nam, já esse tempo passou.<br>Sobre quantos mestres são<br>a experiência dá lição.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Pois tendes esse saber<br>querei ora quem vos quer<br>dai ò demo a openião.</span></p>
+                        <p class="vline stage-dir">Vai Lianor Vaz por Pero Marques e fica Inês Pereira só dizendo:</p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Andar. Pero Marques seja.<br>Quero tomar por esposo<br>quem se tenha por ditoso<br>de cada vez que me veja.<br>Por usar de siso mero<br>asno que me leve quero<br>e nam cavalo folão<br>antes lebre que leão<br>antes lavrador que Nero.</span></p>
+                        <p class="vline stage-dir">Vem Lianor Vaz com Pero Marques, e diz Lianor Vaz:</p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Nô mais cerimónias agora<br>abraçai Inês Pereira<br>por molher e por parceira.</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">Há homem empacho màora.<br>Quanta a dizer abraçar<br>depois que a eu usar.<br>Entonces poderá ser.</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Nam lhe quero mais saber<br>já me quero contentar.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Ora dai-me essa mão cá<br>sabeis as palavras si?</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">Ensinaram-mas a mi<br>porém esquecem-me já.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Ora dizei como digo.</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">E tendes vós aqui trigo<br>pera nos jeitar por cima?</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Inda é cedo, como rima.</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">Soma vós casais comigo<br>e eu convosco pardelhas.<br>Nam compre aqui mais falar<br>e quando vos eu negar<br>que me cortem as orelhas.</span></p>
+                        <p class="vline"><span class="ctag lianor">LIANOR</span><span class="speech">Vou-me, ficai-vos embora.</span></p>
+                        <p class="vline stage-dir">Vai-se e diz Inês Pereira:</p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Marido sairei eu agora<br>que há muito que nam saí?</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">Si molher saí vos i<br>Que eu me irei para fora.</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Marido nam digo disso.</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">Pois que dizeis vós molher?</span></p>
+                        <p class="vline"><span class="ctag ines">INÊS</span><span class="speech">Ir folgar onde eu quiser.</span></p>
+                        <p class="vline"><span class="ctag pero">PERO</span><span class="speech">I onde quiserdes ir<br>vinde quando quiserdes vir<br>estai quando quiserdes estar.<br>Com que podeis vós folgar<br>que eu nam deva consentir?</span></p>
+                        <p class="vline stage-dir">[FIM]</p>
+                    </div>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">3</div>
+            </div>
+            <div class="book-page page-right">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">Análise Textual</h3>
+                    <div class="book-div-thin"></div>
+                    <p class="page-body"><strong>1ª Estrofe</strong><br>Inês surge "triste" pela morte do marido. Lianor tenta consolá-la, lembrando que a morte é inevitável. Lianor assume uma postura prática e sugere rapidamente um novo casamento como solução.</p>
+                    <p class="page-body"><strong>2ª Estrofe</strong><br>Inês recorda o marido falecido, chamando-lhe "discreto" e "sabido". Há ironia, pois o público sabe que ele era opressor. Lianor insiste que deve esquecê-lo e procurar nova proteção. Nota-se o contraste entre o sentimentalismo inicial e a atitude pragmática de Lianor.</p>
+                    <p class="page-body"><strong>3ª Estrofe</strong><br>Inês afirma que a experiência é a maior mestra. Reconhece que aprendeu com o sofrimento do primeiro casamento. Marca a sua evolução psicológica: deixa de valorizar apenas a aparência e o estatuto social.</p>
+                    <p class="page-body"><strong>4ª Estrofe</strong><br>Inês manifesta preferência por um marido dócil, sensato e útil que a valorize. Rejeita inteligência ou charme em favor da estabilidade quotidiana, ilustrado pelas metáforas animais e sociais. O excerto evidencia a visão estratégica do casamento e o contraste entre interesses práticos e sentimentos dissimulados.</p>
+                    <p class="page-body"><strong>5ª Estrofe</strong><br>Lianor valida Inês como esposa, enquanto Inês aceita a situação e mostra contentamento imediato. Evidencia a tensão entre aparência social e pragmatismo /vontade pessoal.</p>
+                    <p class="page-body"><strong>6ª e 7ª Estrofes</strong><br>Lianor orienta o casamento, verificando se Pero sabe os votos (o que vai dizer). Pero demonstra ingenuidade ao perguntar se há trigo para deitar por cima — tradição de fertilidade. Após este aceitar Inês, Lianor retira-se.</p>
+                    <p class="page-body"><strong>8ª e 9ª Estrofes</strong><br>Inês afirma que vai sair mas Pero não a interpreta corretamente — trocadilho cómico. Após compreender, Pero mostra-se totalmente submisso. Contraste entre autonomia de Inês e obediência do marido. A cena evidencia o contraste entre a autonomia de Inês e a dependência/obediência do marido, realçando o humor e a crítica social vicentina.</p>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">4</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 6 – PERSONAGENS -->
+<section class="slide" id="slide-6">
+    <div class="stage-bg"></div>
+    <div class="stage-floor"></div>
+    <div class="stage-spotlights" id="stage-spotlights">
+        <div class="spot-beam beam-0"></div>
+        <div class="spot-beam beam-1"></div>
+        <div class="spot-beam beam-2"></div>
+    </div>
+    <div class="spotlight" id="spotlight"></div>
+    <div class="char-stage" id="char-clouds">
+        <div class="char-cloud" id="ccloud-0">
+            <div class="char-figure-wrap">
+                <img class="char-figure-img" src="ines.jpg"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Inês Pereira">
+                <div class="char-figure-fallback"><span class="material-icons">person</span><span>assets/chars/<br>ines.gif</span></div>
+            </div>
+            <p class="cloud-name">Inês Pereira</p>
+        </div>
+        <div class="char-cloud" id="ccloud-1">
+            <div class="char-figure-wrap">
+                <img class="char-figure-img" src="lianor.jpg"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Lianor Vaz">
+                <div class="char-figure-fallback"><span class="material-icons">person</span><span>assets/chars/<br>lianor.gif</span></div>
+            </div>
+            <p class="cloud-name">Lianor Vaz</p>
+        </div>
+        <div class="char-cloud" id="ccloud-2">
+            <div class="char-figure-wrap">
+                <img class="char-figure-img" src="pero.jpg"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Pero Marques">
+                <div class="char-figure-fallback"><span class="material-icons">person</span><span>assets/chars/<br>pero.gif</span></div>
+            </div>
+            <p class="cloud-name">Pero Marques</p>
+        </div>
+    </div>
+    <div class="char-infobox hidden" id="char-infobox">
+        <div class="char-infobox-header"><h3 id="ci-name">—</h3></div>
+        <div class="char-infobox-body">
+            <p id="ci-desc"></p>
+            <div id="ci-traits" class="ci-traits"></div>
+        </div>
+        <button class="ci-next-btn" onclick="nextCharacter()">Próxima <span class="material-icons">arrow_forward</span></button>
+    </div>
+    <p class="slide-instr">Pressione <kbd>W</kbd> para ver cada personagem</p>
+</section>
+
+<!-- SLIDE 7 – RECURSOS EXPRESSIVOS -->
+<section class="slide" id="slide-7">
+    <div class="parchment-bg"></div>
+    <div class="open-book-wrapper">
+        <div class="open-book">
+            <div class="book-page page-left">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">IV. Recursos Expressivos</h3>
+                    <div class="book-div-thin"></div>
+                    <div class="rec-text">
+
+                        <div class="rec-block" style="border-left-color:var(--rec-anafora-border)">
+                            <span class="rec-type-label" style="background:var(--rec-anafora-bg);color:var(--rec-anafora-fg);border-color:var(--rec-anafora-border)">Anáfora</span>
+                            <p class="rec-quote">"Jesu Jesu" — Estrofe 2, v. 3</p>
+                            <p class="rec-explain">Repetição da mesma palavra no início de segmentos consecutivos, expressando incredulidade e espanto de Inês.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-anastrofe-border)">
+                            <span class="rec-type-label" style="background:var(--rec-anastrofe-bg);color:var(--rec-anastrofe-fg);border-color:var(--rec-anastrofe-border)">Anástrofe</span>
+                            <p class="rec-quote">"Há homem empacho màora." — Estrofe 5, v. 4</p>
+                            <p class="rec-explain">Inversão da ordem normal das palavras, revelando a rusticidade e desajeitamento de Pero Marques.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-antitese-border)">
+                            <span class="rec-type-label" style="background:var(--rec-antitese-bg);color:var(--rec-antitese-fg);border-color:var(--rec-antitese-border)">Antítese</span>
+                            <p class="rec-quote">"antes lebre que leão" — Estrofe 4, v. 8</p>
+                            <p class="rec-explain">Contraste entre a submissão útil (lebre) e a força perigosa (leão).</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-antitese-border)">
+                            <span class="rec-type-label" style="background:var(--rec-antitese-bg);color:var(--rec-antitese-fg);border-color:var(--rec-antitese-border)">Antítese</span>
+                            <p class="rec-quote">"antes lavrador que Nero" — Estrofe 4, v. 9</p>
+                            <p class="rec-explain">Antítese histórica: a humildade do lavrador oposta à tirania de Nero.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-antitese-border)">
+                            <span class="rec-type-label" style="background:var(--rec-antitese-bg);color:var(--rec-antitese-fg);border-color:var(--rec-antitese-border)">Antítese</span>
+                            <p class="rec-quote">"abraçar / depois que a eu usar" — Estrofe 5, v. 5-6</p>
+                            <p class="rec-explain">Contraste entre a formalidade do abraço cerimonial e a crua finalidade prática que Pero lhe atribui.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-apostrofe-border)">
+                            <span class="rec-type-label" style="background:var(--rec-apostrofe-bg);color:var(--rec-apostrofe-fg);border-color:var(--rec-apostrofe-border)">Apóstrofe</span>
+                            <p class="rec-quote">"Como estais Inês Pereira?" — Estrofe 1, v. 2</p>
+                            <p class="rec-explain">Interpelação direta a Inês pelo seu nome completo.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-apostrofe-border)">
+                            <span class="rec-type-label" style="background:var(--rec-apostrofe-bg);color:var(--rec-apostrofe-fg);border-color:var(--rec-apostrofe-border)">Apóstrofe</span>
+                            <p class="rec-quote">"Muito triste Lianor Vaz." — Estrofe 1, v. 3</p>
+                            <p class="rec-explain">Resposta com interpelação direta a Lianor pelo nome.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-apostrofe-border)">
+                            <span class="rec-type-label" style="background:var(--rec-apostrofe-bg);color:var(--rec-apostrofe-fg);border-color:var(--rec-apostrofe-border)">Apóstrofe</span>
+                            <p class="rec-quote">"Filha não tomeis tristura" — Estrofe 1, v. 9</p>
+                            <p class="rec-explain">Interpelação afetiva com tratamento maternal de "filha".</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-apostrofe-border)">
+                            <span class="rec-type-label" style="background:var(--rec-apostrofe-bg);color:var(--rec-apostrofe-fg);border-color:var(--rec-apostrofe-border)">Apóstrofe</span>
+                            <p class="rec-quote">"Casade-vos filha minha." — Estrofe 2, v. 2</p>
+                            <p class="rec-explain">Interpelação carinhosa de Lianor a Inês, tratando-a como filha.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-apostrofe-border)">
+                            <span class="rec-type-label" style="background:var(--rec-apostrofe-bg);color:var(--rec-apostrofe-fg);border-color:var(--rec-apostrofe-border)">Apóstrofe</span>
+                            <p class="rec-quote">"Jesu Jesu" — Estrofe 2, v. 3</p>
+                            <p class="rec-explain">Exclamação religiosa que expressa incredulidade e espanto de Inês.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-comparacao-border)">
+                            <span class="rec-type-label" style="background:var(--rec-comparacao-bg);color:var(--rec-comparacao-fg);border-color:var(--rec-comparacao-border)">Comparação</span>
+                            <p class="rec-quote">"Inda é cedo, como rima." — Estrofe 6, v. 8</p>
+                            <p class="rec-explain">Comparação popular usada por Lianor para adiar o costume de deitar trigo, com efeito cómico.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-eufemismo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-eufemismo-bg);color:var(--rec-eufemismo-fg);border-color:var(--rec-eufemismo-border)">Eufemismo</span>
+                            <p class="rec-quote">"Casei por minha canseira" — Estrofe 1, v. 4</p>
+                            <p class="rec-explain">Suavização do sofrimento vivido no casamento; admissão indireta do erro.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-eufemismo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-eufemismo-bg);color:var(--rec-eufemismo-fg);border-color:var(--rec-eufemismo-border)">Eufemismo</span>
+                            <p class="rec-quote">"Vou-me, ficai-vos embora." — Estrofe 7, v. 5</p>
+                            <p class="rec-explain">Forma suavizada e discreta de Lianor se despedir e afastar.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-idiomatica-border)">
+                            <span class="rec-type-label" style="background:var(--rec-idiomatica-bg);color:var(--rec-idiomatica-fg);border-color:var(--rec-idiomatica-border)">Expressão Idiomática</span>
+                            <p class="rec-quote">"Dai isso por esquecido" — Estrofe 2, v. 8</p>
+                            <p class="rec-explain">Expressão popular que significa "esquece isso"; revela o pragmatismo direto de Lianor.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-hiperbole-border)">
+                            <span class="rec-type-label" style="background:var(--rec-hiperbole-bg);color:var(--rec-hiperbole-fg);border-color:var(--rec-hiperbole-border)">Hipérbole</span>
+                            <p class="rec-quote">"tam discreto e tam sabido" — Estrofe 2, v. 6</p>
+                            <p class="rec-explain">Exagero irónico das qualidades do marido falecido, criando ironia dramática.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-hiperbole-border)">
+                            <span class="rec-type-label" style="background:var(--rec-hiperbole-bg);color:var(--rec-hiperbole-fg);border-color:var(--rec-hiperbole-border)">Hipérbole</span>
+                            <p class="rec-quote">"de cada vez que me veja." — Estrofe 4, v. 4 (ligeira)</p>
+                            <p class="rec-explain">Hipérbole ligeira: desejo de que o marido se sinta sempre feliz por vê-la.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-hiperbole-border)">
+                            <span class="rec-type-label" style="background:var(--rec-hiperbole-bg);color:var(--rec-hiperbole-fg);border-color:var(--rec-hiperbole-border)">Hipérbole</span>
+                            <p class="rec-quote">"que me cortem as orelhas." — Estrofe 7, v. 4</p>
+                            <p class="rec-explain">Exagero cómico de Pero para reforçar a sua promessa de nunca negar nada a Inês.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-imperativo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-imperativo-bg);color:var(--rec-imperativo-fg);border-color:var(--rec-imperativo-border)">Imperativo</span>
+                            <p class="rec-quote">"abraçai Inês Pereira" — Estrofe 5, v. 2</p>
+                            <p class="rec-explain">Lianor dá uma ordem direta a Pero, revelando que é ela quem controla a cerimónia.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-imperativo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-imperativo-bg);color:var(--rec-imperativo-fg);border-color:var(--rec-imperativo-border)">Imperativo</span>
+                            <p class="rec-quote">"Ora dai-me essa mão cá" — Estrofe 6, v. 1</p>
+                            <p class="rec-explain">Ordem direta de Lianor para dar início ao ritual de casamento.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-retorica-border)">
+                            <span class="rec-type-label" style="background:var(--rec-retorica-bg);color:var(--rec-retorica-fg);border-color:var(--rec-retorica-border)">Interrogação Retórica</span>
+                            <p class="rec-quote">"O que havedes de fazer?" — Estrofe 2, v. 1</p>
+                            <p class="rec-explain">Pergunta de Lianor sem resposta esperada, induzindo Inês a refletir e agir.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-retorica-border)">
+                            <span class="rec-type-label" style="background:var(--rec-retorica-bg);color:var(--rec-retorica-fg);border-color:var(--rec-retorica-border)">Interrogação Retórica</span>
+                            <p class="rec-quote">"isso me haveis de dizer?" — Estrofe 2, v. 4</p>
+                            <p class="rec-explain">Inês questiona com indignação a rapidez com que Lianor sugere novo casamento.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-retorica-border)">
+                            <span class="rec-type-label" style="background:var(--rec-retorica-bg);color:var(--rec-retorica-fg);border-color:var(--rec-retorica-border)">Interrogação Retórica</span>
+                            <p class="rec-quote">"sabeis as palavras si?" — Estrofe 6, v. 2</p>
+                            <p class="rec-explain">Lianor verifica, com ironia implícita, se Pero conhece os votos do casamento.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-retorica-border)">
+                            <span class="rec-type-label" style="background:var(--rec-retorica-bg);color:var(--rec-retorica-fg);border-color:var(--rec-retorica-border)">Interrogação Retórica</span>
+                            <p class="rec-quote">"Marido sairei eu agora / que há muito que nam saí?" — Estrofe 8, v. 1-2</p>
+                            <p class="rec-explain">Inês pede autorização ao marido de forma irónica, testando a sua submissão.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-ironia-border)">
+                            <span class="rec-type-label" style="background:var(--rec-ironia-bg);color:var(--rec-ironia-fg);border-color:var(--rec-ironia-border)">Ironia</span>
+                            <p class="rec-quote">"Casei por minha canseira" — Estrofe 1, v. 4</p>
+                            <p class="rec-explain">Ironia situacional: Inês admite que o casamento foi fruto da sua própria teimosia.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-ironia-border)">
+                            <span class="rec-type-label" style="background:var(--rec-ironia-bg);color:var(--rec-ironia-fg);border-color:var(--rec-ironia-border)">Ironia</span>
+                            <p class="rec-quote">"depois que a eu usar." — Estrofe 5, v. 6</p>
+                            <p class="rec-explain">Caracterização rústica de Pero: reduz a cerimónia a algo prático, ignorando totalmente a solenidade.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-ironia-border)">
+                            <span class="rec-type-label" style="background:var(--rec-ironia-bg);color:var(--rec-ironia-fg);border-color:var(--rec-ironia-border)">Ironia</span>
+                            <p class="rec-quote">"Soma vós casais comigo" — Estrofe 6, v. 9</p>
+                            <p class="rec-explain">Pero aceita o casamento de forma ingénua e cómica, sem entender a solenidade do momento.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-popular-border)">
+                            <span class="rec-type-label" style="background:var(--rec-popular-bg);color:var(--rec-popular-fg);border-color:var(--rec-popular-border)">Linguagem Popular / Realista</span>
+                            <p class="rec-quote">"Casei por minha canseira" — Estrofe 1, v. 4</p>
+                            <p class="rec-explain">Expressão popular que espelha o registo coloquial e a oralidade da obra.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-popular-border)">
+                            <span class="rec-type-label" style="background:var(--rec-popular-bg);color:var(--rec-popular-fg);border-color:var(--rec-popular-border)">Linguagem Popular / Realista</span>
+                            <p class="rec-quote">"Se ficaste prenhe basta" — Estrofe 1, v. 5</p>
+                            <p class="rec-explain">Linguagem direta e realista de Lianor, que espelha a rudeza pragmática do povo.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-metafora-border)">
+                            <span class="rec-type-label" style="background:var(--rec-metafora-bg);color:var(--rec-metafora-fg);border-color:var(--rec-metafora-border)">Metáfora</span>
+                            <p class="rec-quote">"buscai outra guarida" — Estrofe 2, v. 9</p>
+                            <p class="rec-explain">"Guarida" (refúgio/abrigo) como metáfora para um novo casamento protetor.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-metafora-border)">
+                            <span class="rec-type-label" style="background:var(--rec-metafora-bg);color:var(--rec-metafora-fg);border-color:var(--rec-metafora-border)">Metáfora</span>
+                            <p class="rec-quote">"nam cavalo folão" — Estrofe 4, v. 7</p>
+                            <p class="rec-explain">O marido perigoso comparado a um cavalo bravio e incontrolável.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-metonimia-border)">
+                            <span class="rec-type-label" style="background:var(--rec-metonimia-bg);color:var(--rec-metonimia-fg);border-color:var(--rec-metonimia-border)">Metonímia</span>
+                            <p class="rec-quote">"e eu convosco pardelhas." — Estrofe 7, v. 1</p>
+                            <p class="rec-explain">"Pardelhas" (perdizes) como metonímia popular para parceria e cumplicidade no casamento.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-paralelismo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-paralelismo-bg);color:var(--rec-paralelismo-fg);border-color:var(--rec-paralelismo-border)">Paralelismo Sintático / Enumeração</span>
+                            <p class="rec-quote">"querei ora quem vos quer" — Estrofe 3, v. 8</p>
+                            <p class="rec-explain">Paralelismo reforçado pelo jogo sonoro entre "querei" e "quer".</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-paralelismo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-paralelismo-bg);color:var(--rec-paralelismo-fg);border-color:var(--rec-paralelismo-border)">Paralelismo Sintático / Enumeração</span>
+                            <p class="rec-quote">"por molher e por parceira" — Estrofe 5, v. 3</p>
+                            <p class="rec-explain">Estrutura paralela que reforça a dupla função de Inês: esposa legal e companheira.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-paralelismo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-paralelismo-bg);color:var(--rec-paralelismo-fg);border-color:var(--rec-paralelismo-border)">Paralelismo Sintático / Enumeração</span>
+                            <p class="rec-quote">"vinde quando quiserdes vir / estai quando quiserdes estar." — Estrofe 9, v. 5-7</p>
+                            <p class="rec-explain">Enumeração paralelística que revela a total submissão de Pero — cede em tudo a Inês.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-perifrase-border)">
+                            <span class="rec-type-label" style="background:var(--rec-perifrase-bg);color:var(--rec-perifrase-fg);border-color:var(--rec-perifrase-border)">Perífrase</span>
+                            <p class="rec-quote">"Quem perdeu um tal marido" — Estrofe 2, v. 5</p>
+                            <p class="rec-explain">Perífrase para se referir a Inês sem a nomear diretamente.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-perifrase-border)">
+                            <span class="rec-type-label" style="background:var(--rec-perifrase-bg);color:var(--rec-perifrase-fg);border-color:var(--rec-perifrase-border)">Perífrase</span>
+                            <p class="rec-quote">"quem se tenha por ditoso" — Estrofe 4, v. 3</p>
+                            <p class="rec-explain">Perífrase para o marido que se considere feliz por estar com Inês.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-personificacao-border)">
+                            <span class="rec-type-label" style="background:var(--rec-personificacao-bg);color:var(--rec-personificacao-fg);border-color:var(--rec-personificacao-border)">Personificação</span>
+                            <p class="rec-quote">"mas nam quis minha ventura" — Estrofe 1, v. 7</p>
+                            <p class="rec-explain">A "ventura" (sorte/destino) é tratada como entidade com vontade própria que contraria Inês.</p>
+                        </div>
+                        <div class="rec-block" style="border-left-color:var(--rec-personificacao-border)">
+                            <span class="rec-type-label" style="background:var(--rec-personificacao-bg);color:var(--rec-personificacao-fg);border-color:var(--rec-personificacao-border)">Personificação</span>
+                            <p class="rec-quote">"a experiência dá lição" — Estrofe 3, v. 6</p>
+                            <p class="rec-explain">A "experiência" é personificada como uma mestra que ensina e transmite saber.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-pleonasmo-border)">
+                            <span class="rec-type-label" style="background:var(--rec-pleonasmo-bg);color:var(--rec-pleonasmo-fg);border-color:var(--rec-pleonasmo-border)">Pleonasmo</span>
+                            <p class="rec-quote">"Marido sairei eu agora / que há muito que nam saí?" — Estrofe 8, v. 1-2</p>
+                            <p class="rec-explain">Repetição redundante da ideia de "sair" que cria efeito cómico e reforça o trocadilho.</p>
+                        </div>
+
+                        <div class="rec-block" style="border-left-color:var(--rec-trocadilho-border)">
+                            <span class="rec-type-label" style="background:var(--rec-trocadilho-bg);color:var(--rec-trocadilho-fg);border-color:var(--rec-trocadilho-border)">Trocadilho</span>
+                            <p class="rec-quote">"Que eu me irei para fora." — Estrofe 8, v. 4</p>
+                            <p class="rec-explain">Duplo sentido: "sair para fora" pode significar sair de casa ou sair para defecar — equívoco cómico e rústico de Pero.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">5</div>
+            </div>
+
+            <div class="book-page page-right">
+                <div class="page-content page-scroll">
+                    <div class="page-orn">❧</div>
+                    <h3 class="page-label">Legenda de Cores</h3>
+                    <div class="book-div-thin"></div>
+                    <p class="page-body" style="margin-bottom:10px;">Cada recurso expressivo está destacado com uma cor distintiva:</p>
+                    <div class="rec-legend">
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-anafora-border)"></div><div><strong>Anáfora</strong><p>Repetição no início de segmentos consecutivos.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-anastrofe-border)"></div><div><strong>Anástrofe</strong><p>Inversão da ordem normal das palavras.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-antitese-border)"></div><div><strong>Antítese</strong><p>Contraste entre ideias opostas.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-apostrofe-border)"></div><div><strong>Apóstrofe</strong><p>Interpelação direta e emotiva.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-comparacao-border)"></div><div><strong>Comparação</strong><p>Relação explícita entre dois elementos.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-eufemismo-border)"></div><div><strong>Eufemismo</strong><p>Suavização de uma ideia desagradável.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-idiomatica-border)"></div><div><strong>Expressão Idiomática</strong><p>Expressão popular com sentido fixo.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-hiperbole-border)"></div><div><strong>Hipérbole</strong><p>Exagero expressivo para intensificar.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-imperativo-border)"></div><div><strong>Imperativo</strong><p>Modo verbal de ordem ou comando.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-retorica-border)"></div><div><strong>Interrogação Retórica</strong><p>Pergunta sem resposta esperada.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-ironia-border)"></div><div><strong>Ironia</strong><p>Dizer o contrário do que se pensa.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-popular-border)"></div><div><strong>Linguagem Popular</strong><p>Registo coloquial e oral do povo.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-metafora-border)"></div><div><strong>Metáfora</strong><p>Comparação implícita entre elementos.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-metonimia-border)"></div><div><strong>Metonímia</strong><p>Substituição por elemento relacionado.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-paralelismo-border)"></div><div><strong>Paralelismo / Enumeração</strong><p>Estruturas sintáticas repetidas.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-perifrase-border)"></div><div><strong>Perífrase</strong><p>Expressão indireta de uma ideia.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-personificacao-border)"></div><div><strong>Personificação</strong><p>Atribuição de características humanas.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-pleonasmo-border)"></div><div><strong>Pleonasmo</strong><p>Repetição redundante com efeito expressivo.</p></div></div>
+                        <div class="rl-item"><div class="rl-color" style="background:var(--rec-trocadilho-border)"></div><div><strong>Trocadilho</strong><p>Jogo de palavras com duplo sentido.</p></div></div>
+                    </div>
+                    <div class="page-orn bottom-orn">❧</div>
+                </div>
+                <div class="page-num">6</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 8 – MAPA MENTAL -->
+<section class="slide" id="slide-8">
+    <div class="clouds-layer-8 hidden" id="clouds-layer-8">
+        <div class="main-cloud-8 mc8-left"></div>
+        <div class="main-cloud-8 mc8-right"></div>
+        <div class="main-cloud-8 mc8-top"></div>
+    </div>
+    <div class="board-bg"></div>
+    <div class="board-wrapper">
+        <h2 class="board-title" id="board-title">V. Auto e Heterocaracterização</h2>
+        <div class="mind-map" id="mmap-1">
+            <div class="map-center">Personagens</div>
+            <div class="map-branch b-ines">
+                <div class="map-node nc">Inês Pereira</div>
+                <div class="map-kids">
+                    <div class="map-leaf"><strong>Autocaracterização:</strong><br>Arrependida ("Casei por minha canseira"), experiente ("a experiência dá lição")<br><span class="lf-ex">Autocrítica / arrependimento</span></div>
+                    <div class="map-leaf"><strong>Heterocaracterização:</strong><br>Não há<br><span class="lf-ex">—</span></div>
+                </div>
+            </div>
+            <div class="map-branch b-pero">
+                <div class="map-node nc">Pero Marques</div>
+                <div class="map-kids">
+                    <div class="map-leaf"><strong>Autocaracterização:</strong><br>Não há<br><span class="lf-ex">—</span></div>
+                    <div class="map-leaf"><strong>Heterocaracterização:</strong><br>Economicamente estável, desavisado ("Pero Marques tem que herdou / fazenda de mil cruzados"), humilde ("Antes lavrador que Nero")<br><span class="lf-ex">Escolha racional após a experiência anterior</span></div>
+                </div>
+            </div>
+            <div class="map-branch b-esc">
+                <div class="map-node nc">Lianor Vaz</div>
+                <div class="map-kids">
+                    <div class="map-leaf"><strong>Heterocaracterização:</strong><br>Não há caracterização explícita<br><span class="lf-ex">—</span></div>
+                    <div class="map-leaf"><strong>Autocaracterização:</strong><br>Não há<br><span class="lf-ex">—</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="eraser-overlay" id="eraser-overlay"></div>
+        <div class="mind-map hidden" id="mmap-2">
+            <div class="map-center">Tipos de Cómico</div>
+            <div class="map-branch b-com1">
+                <div class="map-node ncom">Cómico de Situação</div>
+                <div class="map-kids">
+                    <div class="map-leaf">"finge Inês Pereira estar chorando"<br><span class="lf-ex">Sofrimento exagerado, dramatização. Luto rapidamente substituído por novo casamento. Casamento como negócio.</span></div>
+                </div>
+            </div>
+            <div class="map-branch b-com2">
+                <div class="map-node ncom">Cómico de Linguagem</div>
+                <div class="map-kids">
+                    <div class="map-leaf">Trocadilho com duplo sentido no diálogo entre Inês e Pero.<br><span class="lf-ex">"Marido sairei eu agora / que há muito que nam saí? / Si molher saí vos i / Que eu me irei para fora" — Ir passear ou sair para ter relações amorosas.</span></div>
+                </div>
+            </div>
+            <div class="map-branch b-com3">
+                <div class="map-node ncom">Cómico de Carácter</div>
+                <div class="map-kids">
+                    <div class="map-leaf">"Há homem empacho màora." — Pero<br><span class="lf-ex">Falta de sofisticação social; ingénuo e simples.</span></div>
+                    <div class="map-leaf">"asno que me leve quero" — Pero reduzido a animal de carga, passivo e controlável.<br><span class="lf-ex">Caricatura do marido ideal segundo a nova lógica de Inês.</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="board-nav">
+            <button class="board-btn" id="erase-btn" onclick="eraseBoard()">
+                <span class="material-icons">cleaning_services</span> Apagar quadro
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 9 – SÁTIRA SOCIAL E CONCLUSÃO -->
+<section class="slide" id="slide-9">
+    <div class="sky-descent" id="sky-descent">
+        <div class="dcloud dc1"></div>
+        <div class="dcloud dc2"></div>
+        <div class="dcloud dc3"></div>
+        <div class="dcloud dc4"></div>
+        <div class="ground-layer"></div>
+    </div>
+    <div class="satira-wrap" id="satira-wrap">
+        <h2 class="satira-title">VII. Sátira Social e Conclusão</h2>
+        <div class="satira-topics">
+            <div class="st-topic t1"><span class="t-icon">👩</span><h4>Papel da mulher na sociedade</h4><p>Ao longo da cena, o casamento aparece como a principal solução para a vida de Inês. Lianor Vaz sugere imediatamente que ela volte a casar, como se essa fosse a única opção possível para uma mulher. Isto reflete a realidade social da época, em que o destino feminino estava muitas vezes condicionado ao matrimónio. Gil Vicente expõe, com ironia, essa dependência social.</p></div>
+            <div class="st-topic t2"><span class="t-icon">👑</span><h4>Crítica ao casamento como negócio / interesse</h4><p>O casamento é apresentado de forma bastante prática e interesseira. Lianor Vaz recomenda Pero Marques destacando sobretudo a sua herança e os bens que possui. Desta forma, Gil Vicente satiriza uma sociedade em que o casamento nem sempre é baseado no amor, mas sim em vantagens económicas ou sociais, funcionando quase como um acordo ou negócio.</p></div>
+            <div class="st-topic t3"><span class="t-icon">🎭</span><h4>Crítica à hipocrisia sentimental</h4><p>Inês afirma que perdeu "um tal marido / tão discreto e tão sabido", aparentemente demonstrando grande tristeza. No entanto, pouco depois aceita facilmente a ideia de casar novamente. Esta contradição revela uma hipocrisia sentimental: a dor não é totalmente genuína, mas antes uma representação social do que se espera de uma viúva. Gil Vicente satiriza assim a tendência humana para fingir sentimentos por conveniência ou aparência.</p></div>
+            <div class="st-topic t4"><span class="t-icon">🐴</span><h4>Crítica à ingenuidade de Pero Marques</h4><p>Pero Marques é retratado como um homem simples e ingénuo. Durante o momento do casamento mostra-se desajeitado, esquece-se das palavras e faz comentários que revelam pouca sofisticação. Esta caracterização cria um efeito cómico e permite a Gil Vicente satirizar a figura do homem ingénuo, facilmente influenciável e pouco consciente das convenções sociais.</p></div>
+            <div class="st-topic t5"><span class="t-icon">💬</span><h4>Crítica à superficialidade das relações humanas</h4><p>No diálogo entre Inês Pereira e Lianor Vaz, percebe-se que a conversa sobre a morte do marido não é profunda nem verdadeiramente emotiva. Apesar de Inês afirmar que está triste, Lianor rapidamente sugere uma solução prática: casar novamente. Esta atitude revela uma crítica de Gil Vicente a uma sociedade onde as relações humanas podem ser superficiais e pragmáticas, dando mais importância às conveniências sociais do que aos sentimentos verdadeiros.</p></div>
+        </div>
+        <div class="conclusao-box" id="conclusao-box">
+            <h3>Conclusão</h3>
+            <p>A <em>Farsa de Inês Pereira</em> constitui um verdadeiro espelho da sociedade portuguesa do século XVI. Gil Vicente, através do humor e da sátira, expõe as fraquezas humanas e critica as convenções sociais, mostrando que a felicidade não reside nas aparências, mas antes na simplicidade. A Cena VI sintetiza esta mensagem de forma particularmente clara e intemporal.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE FINAL – CRÉDITOS -->
+<section class="slide" id="slide-final">
+    <div class="final-clouds" id="final-clouds">
+        <div class="final-cloud fc-l"></div>
+        <div class="final-cloud fc-r"></div>
+    </div>
+    <div class="credits-bg"></div>
+    <div class="credits-wrap" id="credits-wrap">
+        <div class="credits-scroll" id="credits-scroll">
+            <div class="cred-orn">✦ ✦ ✦</div>
+            <p class="cred-label">Trabalho realizado por</p>
+            <h2 class="cred-name">Caetano Carrainho nº4</h2>
+            <h2 class="cred-name">Diogo Sardinha nº8</h2>
+            <h2 class="cred-name">Guilherme Dias nº 11</h2>
+            <div class="cred-div"></div>
+            <p class="cred-label">Disciplina</p>
+            <p class="cred-info">Português · 10.º Ano</p>
+            <div class="cred-div"></div>
+            <p class="cred-label">Obra</p>
+            <p class="cred-info"><em>Farsa de Inês Pereira</em><br>Gil Vicente, 1523</p>
+            <div class="cred-div"></div>
+            <p class="cred-label">Tema</p>
+            <p class="cred-info">Cena VI – Análise literária</p>
+            <div class="cred-div"></div>
+            <p class="cred-info">Professora: Tânia Sá</p>
+            <p class="cred-label">O que é suposto eu escrever aqui mesmo?</p>
+            <div class="cred-orn">✦ ✦ ✦</div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<div id="nav-hint" class="nav-hint hidden">
+    <span><kbd>W</kbd> / <kbd>→</kbd> Avançar</span>
+    <span><kbd>S</kbd> / <kbd>←</kbd> Recuar</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
